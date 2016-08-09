@@ -414,7 +414,7 @@ class BehatHTMLFormatter implements Formatter {
     /**
      * @param AfterExerciseCompleted $event
      */
-    public function onAfterExercise(AfterExerciseCompleted $event)
+    public function onAfterExercise(\Behat\Testwork\EventDispatcher\Event\ExerciseCompleted  $event)
     {
 
         $this->timer->stop();
@@ -438,7 +438,7 @@ class BehatHTMLFormatter implements Formatter {
     /**
      * @param AfterSuiteTested $event
      */
-    public function onAfterSuiteTested(AfterSuiteTested $event)
+    public function onAfterSuiteTested(\Behat\Testwork\EventDispatcher\Event\SuiteTested  $event)
     {
         $this->suites[] = $this->currentSuite;
 
